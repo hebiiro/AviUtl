@@ -5,6 +5,10 @@
 <link rel="stylesheet" href="https://hebiiro.github.io/aviutl/assets/css/style.css?v=d840a35d3ce87c559b5de8356f22178aff041223">
 <title>蛇色の AviUtl プラグイン</title>
 <style type="text/css">
+a.download {
+	font-size: smaller;
+	color: #e00;
+}
 </style>
 </head>
 <body>
@@ -21,6 +25,38 @@
 私が作成している AviUtl のプラグインの一覧です。<br>
 </p>
 
+<dl>
+	<li><a href="#DarkenWindow">DarkenWindow - 黒窓 (くろまど)</a> - <a class="download">AviUtl-Plugin-DarkenWindow</a>
+	<li><a href="#UniteWindow">UniteWindow - UniteWindow</a> - <a class="download">AviUtl-Plugin-UniteWindow</a>
+	<li><a href="#DragFilter">DragFilter - フィルタドラッグ移動</a> - <a class="download">AviUtl-Plugin-DragFilter</a>
+	<li><a href="#CopyFilter">CopyFilter - フィルタのコピペ</a> - <a class="download">AviUtl-Plugin-CopyFilter</a>
+	<li><a href="#SelectFavoriteFont">SelectFavoriteFont - お気に入りフォント選択</a> - <a class="download">AviUtl-Plugin-SelectFavoriteFont</a>
+	<li><a href="#SelectEasing">SelectEasing - イージング簡単選択</a> - <a class="download">AviUtl-Plugin-SelectEasing</a>
+	<li><a href="#ShowWaveform">ShowWaveform - アイテム内音声波形</a> - <a class="download">AviUtl-Plugin-ShowWaveform</a>
+	<li><a href="#AdjustLastFrame">AdjustLastFrame - 最終フレーム自動調整</a> - <a class="download">AviUtl-Plugin-AdjustLastFrame</a>
+	<li><a href="#ObjectExplorer">ObjectExplorer - オブジェクトエクスプローラ</a> - <a class="download">AviUtl-Plugin-ObjectExplorer</a>
+	<li><a href="#OptimizeEditBox">OptimizeEditBox - エディットボックス最適化</a> - <a class="download">AviUtl-Plugin-OptimizeEditBox</a>
+	<li><a href="#BigDialog">BigDialog - ダイアログ巨大化</a> - <a class="download">AviUtl-Plugin-BigDialog</a>
+	<li><a href="#ManyView">ManyView - 複数ビューア</a> - <a class="download">AviUtl-Plugin-ManyView</a>
+	<li><a href="#SetZoom">SetZoom - ズーム変更</a> - <a class="download">AviUtl-Plugin-SetZoom</a>
+	<li><a href="#Toumei">Toumei - 拡張編集透明化</a> - <a class="download">AviUtl-Plugin-Toumei</a>
+</dl>
+<!--
+ - <a class="download">AviUtl-Plugin-DarkenWindow</a>
+ - <a class="download">AviUtl-Plugin-UniteWindow</a>
+ - <a class="download">AviUtl-Plugin-DragFilter</a>
+ - <a class="download">AviUtl-Plugin-CopyFilter</a>
+ - <a class="download">AviUtl-Plugin-SelectFavoriteFont</a>
+ - <a class="download">AviUtl-Plugin-SelectEasing</a>
+ - <a class="download">AviUtl-Plugin-ShowWaveform</a>
+ - <a class="download">AviUtl-Plugin-AdjustLastFrame</a>
+ - <a class="download">AviUtl-Plugin-ObjectExplorer</a>
+ - <a class="download">AviUtl-Plugin-OptimizeEditBox</a>
+ - <a class="download">AviUtl-Plugin-BigDialog</a>
+ - <a class="download">AviUtl-Plugin-ManyView</a>
+ - <a class="download">AviUtl-Plugin-SetZoom</a>
+ - <a class="download">AviUtl-Plugin-Toumei</a>
+-->
 <h3 id="DarkenWindow">DarkenWindow - 黒窓 (くろまど)</h3>
 <p>
 AviUtl のスキン (UI のデザイン) を変更します。<br>
@@ -123,7 +159,6 @@ AviUtl-Tool-patch.aul.json.gui
 AviUtl-Tool-aviutl.ini.gui
 -->
 	</main>
-</body>
 <script type="text/javascript">
 // a.download エレメントを最新のリリースに置換する。
 const downloadElements = document.querySelectorAll("a.download");
@@ -134,4 +169,5 @@ downloadElements.forEach(async function(element) {
 	element.textContent = json["name"] + " をダウンロード";
 });
 </script>
+</body>
 </html>
