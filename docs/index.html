@@ -4,6 +4,17 @@
 <meta charset='utf-8'>
 <link rel="stylesheet" href="https://hebiiro.github.io/aviutl/assets/css/style.css?v=d840a35d3ce87c559b5de8356f22178aff041223">
 <title>蛇色の AviUtl プラグイン</title>
+<!-- OGPの設定 -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="蛇色の AviUtl プラグイン" />
+<meta property="og:description" content="私が作成している AviUtl のプラグインやツールの一覧を置いています" />
+<meta property="og:url" content="https://hebiiro.github.io/aviutl/" />
+<meta property="og:site_name" content="hebiiro.github.io/aviutl" />
+<meta property="og:image" content="https://hebiiro.github.io/aviutl/icon_snake.jpg" />
+<!-- Twitterカードの設定 -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@io_hebiiro" />
+<!-- css の設定 -->
 <style type="text/css">
 a.download {
 	font-size: smaller;
@@ -11,7 +22,7 @@ a.download {
 }
 </style>
 </head>
-<body>
+<body >
 	<a id="skip-to-content" href="#content">Skip to the content.</a>
 	<header class="page-header" role="banner">
 		<h1 class="project-name">Welcome to GitHub Pages</h1>
@@ -42,6 +53,21 @@ a.download {
 	<li><a href="#Toumei">Toumei - 拡張編集透明化</a> - <a class="download">AviUtl-Plugin-Toumei</a>
 </dl>
 <!--
+	<li><a href="#DarkenWindow">DarkenWindow - 黒窓 (くろまど)</a>
+	<li><a href="#UniteWindow">UniteWindow - UniteWindow</a>
+	<li><a href="#DragFilter">DragFilter - フィルタドラッグ移動</a>
+	<li><a href="#CopyFilter">CopyFilter - フィルタのコピペ</a>
+	<li><a href="#SelectFavoriteFont">SelectFavoriteFont - お気に入りフォント選択</a>
+	<li><a href="#SelectEasing">SelectEasing - イージング簡単選択</a>
+	<li><a href="#ShowWaveform">ShowWaveform - アイテム内音声波形</a>
+	<li><a href="#AdjustLastFrame">AdjustLastFrame - 最終フレーム自動調整</a>
+	<li><a href="#ObjectExplorer">ObjectExplorer - オブジェクトエクスプローラ</a>
+	<li><a href="#OptimizeEditBox">OptimizeEditBox - エディットボックス最適化</a>
+	<li><a href="#BigDialog">BigDialog - ダイアログ巨大化</a>
+	<li><a href="#ManyView">ManyView - 複数ビューア</a>
+	<li><a href="#SetZoom">SetZoom - ズーム変更</a>
+	<li><a href="#Toumei">Toumei - 拡張編集透明化</a>
+
  - <a class="download">AviUtl-Plugin-DarkenWindow</a>
  - <a class="download">AviUtl-Plugin-UniteWindow</a>
  - <a class="download">AviUtl-Plugin-DragFilter</a>
@@ -149,10 +175,6 @@ AviUtl の各ウィンドウを一つのウィンドウにまとめます。<br>
 </p>
 
 <!--
-<h3 id="DragFilter">DragFilter - </h3>
-<p></p>
-<p><a href="https://github.com/hebiiro/AviUtl-Plugin-DragFilter/releases">「」のダウンロード</a></p>
-
 AviUtl-Plugin-SelectAliasFolder
 AviUtl-Plugin-SwitchSettings
 AviUtl-Tool-patch.aul.json.gui
@@ -160,14 +182,17 @@ AviUtl-Tool-aviutl.ini.gui
 -->
 	</main>
 <script type="text/javascript">
-// a.download エレメントを最新のリリースに置換する。
-const downloadElements = document.querySelectorAll("a.download");
-downloadElements.forEach(async function(element) {
-	const name = element.textContent;
-	const json = await fetch("https://api.github.com/repos/hebiiro/" + name + "/releases/latest").then(r => r.json());
-	element.href = json["assets"][0]["browser_download_url"];
-	element.textContent = json["name"] + " をダウンロード";
-});
+window.onload = function()
+{
+	// a.download エレメントを最新のリリースに置換する。
+	const downloadElements = document.querySelectorAll("a.download");
+	downloadElements.forEach(async function(element) {
+		const name = element.textContent;
+		const json = await fetch("https://api.github.com/repos/hebiiro/" + name + "/releases/latest").then(r => r.json());
+		element.href = json["assets"][0]["browser_download_url"];
+		element.textContent = json["name"] + " をダウンロード";
+	});
+}
 </script>
 </body>
 </html>
