@@ -58,6 +58,7 @@ a.download {
 	<li><a href="#Toumei">Toumei - 拡張編集透明化</a> - <a href="#" class="download">AviUtl-Plugin-Toumei</a>
 	<li><a href="#BuildStairs">BuildStairs - アイテムずらし</a> - <a href="#" class="download">AviUtl-Plugin-BuildStairs</a>
 	<li><a href="#OutputSeq">OutputSeq - 連番出力</a> - <a href="#" class="download">AviUtl-Plugin-OutputSeq</a>
+	<li><a href="#SaveImage">SaveImage - 画像保存</a> - <a href="#" class="download">AviUtl-Plugin-SaveImage</a>
 </dl>
 
 <h3 id="DarkenWindow">DarkenWindow - 黒窓 (くろまど)</h3>
@@ -198,6 +199,12 @@ AviUtl の各ウィンドウを一つのウィンドウにまとめます。<br>
 <a href="#" class="github">AviUtl-Plugin-OutputSeq</a><br>
 </p>
 
+<h3 id="SaveImage">SaveImage - 画像保存</h3>
+<p>
+現在のフレーム、または選択アイテムを画像として保存します。<br>
+<a href="#" class="github">AviUtl-Plugin-SaveImage</a><br>
+</p>
+
 <!--
 AviUtl-Plugin-SelectAliasFolder
 AviUtl-Plugin-SwitchSettings
@@ -206,7 +213,7 @@ AviUtl-Tool-aviutl.ini.gui
 -->
 	</main>
 <script type="text/javascript">
-window.onload = async function ()
+function buildGitHubLink()
 {
 	// a.github エレメントを GitHub へのリンクに置換する。
 	const githubElements = document.querySelectorAll("a.github");
@@ -217,6 +224,10 @@ window.onload = async function ()
 		element.href = "https://github.com/hebiiro/" + name;
 		element.textContent = "詳細";
 	}
+}
+
+async function buildDownloadLink()
+{
 	// a.download エレメントを最新のリリースに置換する。
 	const downloadElements = document.querySelectorAll("a.download");
 	for (let i in downloadElements)
@@ -227,6 +238,12 @@ window.onload = async function ()
 		element.href = json["assets"][0]["browser_download_url"];
 		element.textContent = json["name"] + " をダウンロード";
 	}
+}
+
+window.onload = function()
+{
+	buildGitHubLink();
+	buildDownloadLink();
 }
 </script>
 </body>
